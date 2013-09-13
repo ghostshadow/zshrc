@@ -1,5 +1,6 @@
 .PHONY: install
 install:
+	touch histfile
 	cp -r ./ ${HOME}/.zsh
 	ln -s ${HOME}/.zsh/zshrc ${HOME}/.zshrc
 
