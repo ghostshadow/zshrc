@@ -14,7 +14,8 @@ alias less="less -R"
 #global aliases
 
 alias -g L="| less"
-alias -g ">q"="2>&1 >/dev/null"
-alias -g ">e"="2>/dev/null"
+alias -g G="| grep"
+alias -g "Oq"="2>&1 >/dev/null"
+alias -g "Oe"="2>/dev/null"
 
 # END Alias
