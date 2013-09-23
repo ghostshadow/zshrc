@@ -2,7 +2,7 @@
 install:
 	touch histfile
 	cp -r ./ ${HOME}/.zsh
-	ln -s ${HOME}/.zsh/zshrc ${HOME}/.zshrc
+	ln -sf ${HOME}/.zsh/zshrc ${HOME}/.zshrc
 
 .PHONY: uninstall
 uninstall:
