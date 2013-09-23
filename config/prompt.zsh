@@ -1,6 +1,7 @@
 # User Prompt
 
 autoload -U promptinit && promptinit
+setopt prompt_subst
 case $(whoami) in
 	"root")
 		UCOLOR="red"
@@ -19,6 +20,6 @@ case $(whoami) in
 		;;
 esac
 
-PROMPT="[%{$fg_no_bold[$UCOLOR]%}%n%{$reset_color%}]>%{$fg_no_bold[yellow]%}%~%{$reset_color%} %{$fg_no_bold[magenta]%}%?%{$fg_no_bold[$PCOLOR]${PSIGN} $reset_color%}"
+PROMPT="[%{$fg_no_bold[$UCOLOR]%}%n%{$reset_color%}]>%{$fg_no_bold[yellow]%}%~%{$reset_color%} %{$fg_no_bold[magenta]%}%?%{$fg_no_bold[$PCOLOR]%} $PSIGN %{$reset_color%}"
 
 # End Propt
