@@ -8,7 +8,7 @@ case $(whoami) in
 		PCOLOR="red"
 		PSIGN="#"
 		;;
-	"jona")
+	"$(cat ${ZSHC}/suser)")
 		UCOLOR="green"
 		PCOLOR="blue"
 		PSIGN=">"

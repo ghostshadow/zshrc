@@ -4,7 +4,7 @@ case $(whoami) in
 	"root")
 		UCOLORC="1"
 		;;
-	"jona")
+	"$(cat ${ZSHC}/suser)")
 		UCOLORC="2"
 		;;
 	*)
