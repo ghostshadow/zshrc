@@ -7,11 +7,12 @@
 
 CORE=(
 	basic
+	helpers	
 	color
 	completion
 	alias
 	prompt
-	function
+
 )
 
 ###############

@@ -2,7 +2,7 @@
 
 autoload -U promptinit && promptinit
 setopt prompt_subst
-case $(whoami) in
+case $(get_user) in
 	"root")
 		UCOLOR="red"
 		PCOLOR="red"

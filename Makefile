@@ -1,8 +1,9 @@
 .PHONY: install
 install:
-	test -f histfile || touch histfile
 	(test "${SUSER}" && echo -n ${SUSER} >./config/suser) || true
-	cp -r ./ ${HOME}/.zsh
+	test -d ${HOME}/.zsh || mkdir ${HOME}/.zsh
+	cp -r ./config ./bin ./zshrc ${HOME}/.zsh
+	test -f ${HOME}/.zsh/histfile || touch ${HOME}/.zsh/histfile
 	(test -f ${HOME}/.zshrc && mv ${HOME}/.zshrc ${HOME}/.zsh/zshrc.old) || true
 	ln -sf ${HOME}/.zsh/zshrc ${HOME}/.zshrc
 

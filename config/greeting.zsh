@@ -1,6 +1,6 @@
 # Display MOTD
 
-case $(whoami) in
+case $(get_user) in
 	"root")
 		UCOLORC="1"
 		;;
