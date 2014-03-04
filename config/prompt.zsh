@@ -20,6 +20,6 @@ case $(get_user) in
 		;;
 esac
 
-PROMPT="[%{$fg_no_bold[$UCOLOR]%}%n%{$reset_color%}]>%{$fg_no_bold[yellow]%}%~%{$reset_color%} %{$fg_no_bold[magenta]%}%?%{$fg_no_bold[$PCOLOR]%} $PSIGN %{$reset_color%}"
+PROMPT="[%{$fg_no_bold[$UCOLOR]%}%n%{$reset_color%}@%m]>%{$fg_no_bold[yellow]%}%~%{$reset_color%} %{$fg_no_bold[magenta]%}%?%{$fg_no_bold[$PCOLOR]%} $PSIGN %{$reset_color%}"
 
 # End Propt
