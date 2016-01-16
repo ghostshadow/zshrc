@@ -17,6 +17,9 @@ run-with-sudo() { LBUFFER="sudo $LBUFFER" }
 zle -N run-with-sudo
 bindkey '^Xs' run-with-sudo
 
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+
 calc() { echo $(($*)) } 
 # End Userfunc
 #

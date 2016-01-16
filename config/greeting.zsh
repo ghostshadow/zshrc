@@ -1,10 +1,10 @@
 # Display MOTD
 
-case $(get_user) in
-	"root")
+case $USERNAME in
+	root)
 		UCOLORC="1"
 		;;
-	"$(cat ${ZSHC}/suser)")
+	$(cat ${ZSHC}/suser))
 		UCOLORC="2"
 		;;
 	*)
@@ -12,7 +12,7 @@ case $(get_user) in
 		;;
 esac
 
-echo -e "\e[1mHello \e[0;3${UCOLORC}m$(whoami)\e[1;39m it is now $(date +%H:%M). Welcome back!\e[0m"
+echo -e "\e[1mHello \e[0;3${UCOLORC}m$USERNAME\e[1;39m it is now $(date +%H:%M). Welcome back!\e[0m"
 
 zshexit() {
 	echo -e "\n\e[1mExiting! Good Bye!\e[0m\n"
