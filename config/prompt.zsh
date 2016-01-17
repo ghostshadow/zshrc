@@ -24,8 +24,8 @@ PROMPT="[%{$fg_no_bold[$UCOLOR]%}%n%{$reset_color%}@%m]>%{$fg_no_bold[yellow]%}%
 
 case $TERM in
 	xterm*)
-		precmd() {print -Pn "\e]0;ZSH [%n]\a"}
-		preexec() {print -Pn "\e]0;`echo -n ${2} | awk '{print $1;}'`\a"}
+		precmd() {print -Pn "\e]0;ZSH [%n@%m]\a"}
+		preexec() {print -Pn "\e]0;`echo -n ${2} | awk '{print $1;}'`@%m\a"}
 		;;
 esac
 
