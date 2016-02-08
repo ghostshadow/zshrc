@@ -20,6 +20,6 @@ bindkey '^Xs' run-with-sudo
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
-calc() { echo $(($*)) } 
+calc() { ${ZSHB}/calc.py $1 }
 # End Userfunc
 #
