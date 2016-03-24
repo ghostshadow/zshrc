@@ -2,6 +2,7 @@
 
 from math import *
 import sys
+import code
 
 if __name__=="__main__":
     query=""
@@ -9,13 +10,7 @@ if __name__=="__main__":
         query=sys.argv[1]
         print(eval(query))
     else:
-        while True:
-            try:
-                query=input("> ")
-                print(eval(query))
-            except EOFError:
-                sys.exit(0)
-            except:
-                e=sys.exc_info()
-                sys.excepthook(e[0],e[1],e[2])
+        code.interact(banner="Simple Calc\n"\
+                "(math.py functions in global namespace)",\
+                local=locals())
 
