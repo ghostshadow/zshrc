@@ -1,6 +1,7 @@
 # Alias Definitions
 
 export EDITOR="vim"
+export PAGER="less"
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
